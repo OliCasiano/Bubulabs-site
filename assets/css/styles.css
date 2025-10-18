@@ -400,3 +400,11 @@ dialog::backdrop{ background: rgba(0,0,0,.55); }
   align-items:center;
 }
 
+/* Variante secundaria del botón (violeta -> rosa) */
+.cta.cta-secondary{
+  background: linear-gradient(135deg, #8b5cf6, #f9a8d4);
+}
+.cta.cta-secondary:hover{
+  filter: brightness(1.05);
+}
+
