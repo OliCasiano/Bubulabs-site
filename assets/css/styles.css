@@ -37,6 +37,7 @@ img {
     padding: 24px
 }
 
+/* Header */
 header {
     position: sticky;
     top: 0;
@@ -46,11 +47,16 @@ header {
     z-index: 10
 }
 
+/* Compactamos solo el padding interno del header */
+header .wrap {
+    padding: 6px 20px
+}
+
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px
+    gap: 12px
 }
 
 .logo {
@@ -61,13 +67,21 @@ header {
 }
 
 .logo img {
-    height: 28px;
+    height: 80px;
     width: auto;
     display: block
 }
 
+/* ↑ Logo más grande */
+.logo span {
+    font-size: 28px;
+    line-height: 1
+}
+
+/* ↑ Texto MiniLabs3D un poco mayor */
+
 .menu a {
-    padding: 10px 14px;
+    padding: 8px 12px;
     border-radius: 999px;
     color: var(--muted)
 }
@@ -77,14 +91,15 @@ header {
     color: var(--ink)
 }
 
-.cta {
-    background: linear-gradient(135deg, var(--brand), var(--accent));
-    color: #0b0b10;
-    padding: 10px 14px;
-    border-radius: 999px;
-    font-weight: 700
+.menu-toggle {
+    display: none;
+    background: #16162a;
+    border: 1px solid #23233a;
+    border-radius: 10px;
+    padding: 8px 10px
 }
 
+/* Hero */
 .hero {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -102,6 +117,24 @@ header {
 .hero p {
     color: var(--muted);
     font-size: 18px
+}
+
+.hero-img{
+  width:100%;
+  height:auto;          /* <- mantiene proporción original */
+  display:block;
+  border-radius: var(--radius);
+  /* quitar: aspect-ratio y object-fit */
+}
+
+
+/* Componentes */
+.cta {
+    background: linear-gradient(135deg, var(--brand), var(--accent));
+    color: #0b0b10;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 700
 }
 
 .card {
@@ -242,17 +275,26 @@ header {
     .menu-toggle {
         display: inline-flex
     }
+
+    /* Logo más contenido en móvil */
+    .logo img {
+        height: 56px
+    }
+
+    /* Texto un pelín menor para no subir altura */
+    .logo span {
+        font-size: 18px;
+        line-height: 1
+    }
+
+    /* Compactar aún más el padding del header en móvil */
+    header .wrap {
+        padding: 6px 16px
+    }
+
 }
 
-.menu-toggle {
-    display: none;
-    background: #16162a;
-    border: 1px solid #23233a;
-    border-radius: 10px;
-    padding: 8px 10px
-}
-
-/* Arte placeholder para los muñecos (puedes reemplazar por imágenes reales) */
+/* Arte placeholder para los muñecos (reemplaza por imágenes reales cuando quieras) */
 .toy {
     width: 100%;
     aspect-ratio: 1/1;
@@ -304,4 +346,14 @@ header {
     height: 38%;
     border: 1px dashed rgba(255, 255, 255, .35);
     border-radius: 12px
+}
+
+/* Imágenes reales de la galería */
+.gallery-img{
+  width:100%;
+  aspect-ratio:1/1;        /* cuadrada como antes */
+  object-fit:cover;         /* recorte elegante */
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  display:block;
 }

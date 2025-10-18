@@ -1,155 +1,170 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MiniLabs3D • BubuLabs</title>
-  <meta name="description" content="Colección oficial de Bubulabs: criaturas traviesas nacidas en MiniLabs3D. Descubre el diseño base y Bubulab Araña Roja." />
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiniLabs3D • BubuLabs</title>
+    <meta name="description"
+        content="Colección oficial de Bubulabs: criaturas traviesas nacidas en MiniLabs3D. Descubre el diseño base y Bubulab Araña Roja." />
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
+
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="logo" href="#home" aria-label="Ir al inicio">
-  <img src="assets/logo-minilogo3d.png" alt="MiniLabs3D logo" />
-  <span>MiniLabs3D</span>
-</a>
+    <header>
+        <div class="wrap nav">
+            <a class="logo" href="#home" aria-label="Ir al inicio">
+                <img src="assets/logo-minilogo3d.png" alt="MiniLabs3D logo" />
+                <span>MiniLabs3D</span>
+            </a>
 
-      </a>
-      <nav class="menu" aria-label="Principal">
-        <a href="#coleccion">Colección</a>
-        <a href="#historia">Historia</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.menu.mobile')?.classList.toggle('open')">☰</button>
-    </div>
-    <div class="wrap menu mobile" style="display:none"></div>  </header>
+            </a>
+            <nav class="menu" aria-label="Principal">
+                <a href="#coleccion">Colección</a>
+                <a href="#historia">Historia</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú"
+                onclick="document.querySelector('.menu.mobile')?.classList.toggle('open')">☰</button>
+        </div>
+        <div class="wrap menu mobile" style="display:none"></div>
+    </header>
 
-  <main class="wrap">
-    <section class="hero" id="home">
-      <div>
-        <div class="tag">MiniLabs3D · Colección oficial</div>
-        <h1>Bubulabs: criaturas traviesas con chispa</h1>
-        <p>Pequeños seres nacidos en <strong>MiniLabs3D</strong>. Les encanta disfrazarse de héroes, monstruos y leyendas del cine. Cada uno tiene su historia… y su espiral brillante.</p>
-        <div style="display:flex; gap:10px; margin-top:14px">
-          <a class="cta" href="#coleccion">Ver colección</a>
-          <a class="pill" href="#contacto">Quiero colaborar</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="toy" role="img" aria-label="Muñeco base Bubulabs con espiral luminosa">
-          <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-          <div class="web" aria-hidden="true"></div>
-        </div>
-        <div style="padding:10px 2px; display:flex; justify-content:space-between; align-items:center">
-          <span class="badge">Diseño base</span>
-          <span class="badge">Espíritu travieso</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="coleccion">
-      <div class="section-title">
-        <h2 style="margin:0">Colección</h2>
-        <span class="pill">2 diseños</span>
-      </div>
-      <div class="grid gallery">
-        <article class="item">
-          <div class="toy" aria-label="Bubulab Base">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-          </div>
-          <div class="info">
-            <h3>Bubulab Base</h3>
-            <p class="muted">Base oficial de la colección. Cuerpo redondeado tipo vinilo y espiral brillante en el pecho.</p>
-            <div class="buy">
-              <span class="price">Próximamente</span>
-              <a class="btn" href="#contacto">Avísame</a>
+    <main class="wrap">
+        <section class="hero" id="home">
+            <div>
+                <div class="tag">MiniLabs3D · Colección oficial</div>
+                <h1>Bubulabs: criaturas traviesas con chispa</h1>
+                <p>Pequeños seres nacidos en <strong>MiniLabs3D</strong>. Les encanta disfrazarse de héroes, monstruos y
+                    leyendas del cine. Cada uno tiene su historia… y su espiral brillante.</p>
+                <div style="display:flex; gap:10px; margin-top:14px">
+                    <a class="cta" href="#coleccion">Ver colección</a>
+                    <a class="pill" href="#contacto">Quiero colaborar</a>
+                </div>
             </div>
-          </div>
-        </article>
-        <article class="item">
-          <div class="toy spider" aria-label="Bubulab Araña Roja">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-          </div>
-          <div class="info">
-            <h3>Bubulab Araña Roja</h3>
-            <p class="muted">Colores rojo y negro, ojos grandes blancos y patrón abstracto tipo telaraña. Actitud traviesa.</p>
-            <div class="buy">
-              <span class="price">Limited</span>
-              <a class="btn" href="#contacto">Reservar</a>
+            <div class="card">
+                <img src="assets/base-bubulabs-.png" alt="Bubulab Base" class="hero-img">
+                </div>
+                <div style="padding:10px 2px; display:flex; justify-content:space-between; align-items:center">
+                    <span class="badge">Diseño base</span>
+                    <span class="badge">Espíritu travieso</span>
+                </div>
             </div>
-          </div>
-        </article>
-        <article class="item">
-          <div class="toy" style="background:radial-gradient(60% 60% at 30% 30%, #a7f3d0, #10b981 45%, #0f172a 80%)" aria-label="Sorpresa en camino">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-          </div>
-          <div class="info">
-            <h3>Próximo Bubulab…</h3>
-            <p class="muted">Nueva variante en desarrollo. ¿Qué disfraz te gustaría ver?</p>
-            <div class="buy">
-              <span class="price">Idea Lab</span>
-              <a class="btn" href="#contacto">Proponer</a>
+        </section>
+
+        <section id="coleccion">
+            <div class="section-title">
+                <h2 style="margin:0">Colección</h2>
+                <span class="pill">2 diseños</span>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
+            <div class="grid gallery">
+                <article class="item">
+                    <div class="toy" aria-label="Bubulab Base">
+                        <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+                    </div>
+                    <div class="info">
+                        <h3>Bubulab Base</h3>
+                        <p class="muted">Base oficial de la colección. Cuerpo redondeado tipo vinilo y espiral brillante
+                            en el pecho.</p>
+                        <div class="buy">
+                            <span class="price">Próximamente</span>
+                            <a class="btn" href="#contacto">Avísame</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="toy spider" aria-label="Bubulab Araña Roja">
+                        <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+                    </div>
+                    <div class="info">
+                        <h3>Bubulab Araña Roja</h3>
+                        <p class="muted">Colores rojo y negro, ojos grandes blancos y patrón abstracto tipo telaraña.
+                            Actitud traviesa.</p>
+                        <div class="buy">
+                            <span class="price">Limited</span>
+                            <a class="btn" href="#contacto">Reservar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="toy"
+                        style="background:radial-gradient(60% 60% at 30% 30%, #a7f3d0, #10b981 45%, #0f172a 80%)"
+                        aria-label="Sorpresa en camino">
+                        <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+                    </div>
+                    <div class="info">
+                        <h3>Próximo Bubulab…</h3>
+                        <p class="muted">Nueva variante en desarrollo. ¿Qué disfraz te gustaría ver?</p>
+                        <div class="buy">
+                            <span class="price">Idea Lab</span>
+                            <a class="btn" href="#contacto">Proponer</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <section id="historia" style="margin-top:34px">
-      <div class="section-title">
-        <h2 style="margin:0">Historia</h2>
-        <span class="pill">El laboratorio</span>
-      </div>
-      <div class="about">
-        <div class="card">
-          <h3 style="margin-top:0">¿Qué es BubuLabs?</h3>
-          <p>Los Bubulabs nacen en <strong>MiniLabs3D</strong>. Pequeños, curiosos y llenos de imaginación. Mantienen siempre su cara base y esa espiral brillante en el pecho, sin importar el disfraz.</p>
-          <p>La colección oficial incluye <em>Bubulab Base</em> y <em>Bubulab Araña Roja</em>, y seguirá creciendo con ediciones limitadas.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">Para fans y coleccionistas</h3>
-          <p>Si eres coleccionista o marca y te interesa una colaboración, cuéntanos tu idea. Podemos explorar variantes, empaques y lanzamientos especiales.</p>
-          <ul>
-            <li>Impresión 3D y acabados premium</li>
-            <li>Packaging temático</li>
-            <li>Reservas limitadas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <section id="historia" style="margin-top:34px">
+            <div class="section-title">
+                <h2 style="margin:0">Historia</h2>
+                <span class="pill">El laboratorio</span>
+            </div>
+            <div class="about">
+                <div class="card">
+                    <h3 style="margin-top:0">¿Qué es BubuLabs?</h3>
+                    <p>Los Bubulabs nacen en <strong>MiniLabs3D</strong>. Pequeños, curiosos y llenos de imaginación.
+                        Mantienen siempre su cara base y esa espiral brillante en el pecho, sin importar el disfraz.</p>
+                    <p>La colección oficial incluye <em>Bubulab Base</em> y <em>Bubulab Araña Roja</em>, y seguirá
+                        creciendo con ediciones limitadas.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-top:0">Para fans y coleccionistas</h3>
+                    <p>Si eres coleccionista o marca y te interesa una colaboración, cuéntanos tu idea. Podemos explorar
+                        variantes, empaques y lanzamientos especiales.</p>
+                    <ul>
+                        <li>Impresión 3D y acabados premium</li>
+                        <li>Packaging temático</li>
+                        <li>Reservas limitadas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="contacto" style="margin-top:34px">
-      <div class="section-title">
-        <h2 style="margin:0">Contacto</h2>
-        <span class="pill">Hablemos</span>
-      </div>
-      <div class="card">
-        <form onsubmit="event.preventDefault(); alert('¡Gracias! Te escribiremos pronto.'); this.reset();">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
-            <label>Nombre<br><input required name="name" style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
-            <label>Email<br><input required type="email" name="email" style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
-          </div>
-          <label style="display:block; margin-top:12px">Mensaje<br>
-            <textarea required name="msg" rows="4" style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></textarea>
-          </label>
-          <div style="display:flex; gap:10px; margin-top:12px">
-            <button class="cta" type="submit">Enviar</button>
-            <a class="pill" href="mailto:hola@minilabs3d.com">o escríbenos</a>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
+        <section id="contacto" style="margin-top:34px">
+            <div class="section-title">
+                <h2 style="margin:0">Contacto</h2>
+                <span class="pill">Hablemos</span>
+            </div>
+            <div class="card">
+                <form onsubmit="event.preventDefault(); alert('¡Gracias! Te escribiremos pronto.'); this.reset();">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+                        <label>Nombre<br><input required name="name"
+                                style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
+                        <label>Email<br><input required type="email" name="email"
+                                style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
+                    </div>
+                    <label style="display:block; margin-top:12px">Mensaje<br>
+                        <textarea required name="msg" rows="4"
+                            style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></textarea>
+                    </label>
+                    <div style="display:flex; gap:10px; margin-top:12px">
+                        <button class="cta" type="submit">Enviar</button>
+                        <a class="pill" href="mailto:hola@minilabs3d.com">o escríbenos</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
-  <footer class="wrap footer">
-    <span>© <span id="year"></span> MiniLabs3D · BubuLabs</span>
-    <span>Hecho con ❤ en España</span>
-  </footer>
+    <footer class="wrap footer">
+        <span>© <span id="year"></span> MiniLabs3D · BubuLabs</span>
+        <span>Hecho con ❤ en España</span>
+    </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
