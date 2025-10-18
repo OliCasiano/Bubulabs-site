@@ -1,481 +1,155 @@
 <!doctype html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BubuLabs • MiniLabs3D</title>
-    <meta name="description"
-        content="Colección oficial de Bubulabs: criaturas traviesas nacidas en MiniLabs3D. Descubre el diseño base y Bubulab Araña Roja." />
-    <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🧪%3C/text%3E%3C/svg%3E" />
-    <style>
-        :root {
-            --bg: #0b0b10;
-            --card: #13131a;
-            --ink: #eaeaf2;
-            --muted: #b8b8c7;
-            --brand: #8b5cf6;
-            --accent: #22d3ee;
-            --danger: #ef4444;
-            --radius: 16px;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniLabs3D • BubuLabs</title>
+  <meta name="description" content="Colección oficial de Bubulabs: criaturas traviesas nacidas en MiniLabs3D. Descubre el diseño base y Bubulab Araña Roja." />
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-        * {
-            box-sizing: border-box
-        }
-
-        html,
-        body {
-            margin: 0;
-            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
-            background: var(--bg);
-            color: var(--ink);
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none
-        }
-
-        img {
-            max-width: 100%;
-            display: block
-        }
-
-        .wrap {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 24px
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            backdrop-filter: saturate(1.2) blur(6px);
-            background: rgb(11 11 16 / 0.6);
-            border-bottom: 1px solid #1f1f2a;
-            z-index: 10
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700
-        }
-
-        .logo .dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, var(--accent), var(--brand));
-            box-shadow: 0 0 18px var(--accent)
-        }
-
-        .menu a {
-            padding: 10px 14px;
-            border-radius: 999px;
-            color: var(--muted)
-        }
-
-        .menu a:hover {
-            background: #1a1a25;
-            color: var(--ink)
-        }
-
-        .cta {
-            background: linear-gradient(135deg, var(--brand), var(--accent));
-            color: #0b0b10;
-            padding: 10px 14px;
-            border-radius: 999px;
-            font-weight: 700
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 24px;
-            align-items: center;
-            padding: 40px 0
-        }
-
-        .hero h1 {
-            font-size: clamp(28px, 6vw, 56px);
-            line-height: 1.05;
-            margin: 0
-        }
-
-        .hero p {
-            color: var(--muted);
-            font-size: 18px
-        }
-
-        .card {
-            background: linear-gradient(180deg, #141420, #10101a);
-            border: 1px solid #1f1f2a;
-            border-radius: var(--radius);
-            padding: 18px;
-            box-shadow: 0 10px 30px rgb(0 0 0 / 0.25)
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px
-        }
-
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #181826;
-            border: 1px solid #232334;
-            color: #b8b8c7;
-            padding: 6px 10px;
-            border-radius: 999px;
-            font-size: 12px
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 32px 0 12px
-        }
-
-        .pill {
-            background: #161622;
-            border: 1px solid #232334;
-            border-radius: 999px;
-            padding: 6px 10px;
-            color: #9aa;
-            font-size: 12px
-        }
-
-        .gallery .item {
-            position: relative;
-            overflow: hidden;
-            border-radius: var(--radius);
-            background: #0f0f18;
-            border: 1px solid #222235
-        }
-
-        .gallery .info {
-            padding: 12px
-        }
-
-        .gallery h3 {
-            margin: 0 0 4px
-        }
-
-        .badge {
-            font-size: 11px;
-            padding: 4px 8px;
-            border-radius: 999px;
-            border: 1px solid #2a2a3b;
-            color: #aaa
-        }
-
-        .buy {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 8px
-        }
-
-        .buy .price {
-            background: #131325;
-            border: 1px solid #23233a;
-            padding: 6px 10px;
-            border-radius: 9px
-        }
-
-        .buy .btn {
-            background: linear-gradient(135deg, var(--brand), var(--accent));
-            color: #0b0b10;
-            padding: 6px 12px;
-            border-radius: 9px;
-            font-weight: 700
-        }
-
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px
-        }
-
-        .footer {
-            margin: 40px 0 16px;
-            color: #8a8aa2;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            flex-wrap: wrap
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr
-            }
-
-            .grid {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .about {
-                grid-template-columns: 1fr
-            }
-        }
-
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr
-            }
-
-            .menu {
-                display: none
-            }
-
-            .menu.mobile {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-                padding: 12px
-            }
-
-            .menu-toggle {
-                display: inline-flex
-            }
-        }
-
-        .menu-toggle {
-            display: none;
-            background: #16162a;
-            border: 1px solid #23233a;
-            border-radius: 10px;
-            padding: 8px 10px
-        }
-
-        /* Simple placeholder art */
-        .toy {
-            width: 100%;
-            aspect-ratio: 1/1;
-            background: radial-gradient(60% 60% at 30% 30%, #ffb3c7, #ff2a6f 40%, #1b1020 75%);
-            display: grid;
-            place-items: center;
-            position: relative;
-        }
-
-        .toy::after {
-            content: "";
-            position: absolute;
-            inset: 12px;
-            border-radius: 28px;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .2), rgba(0, 0, 0, .25));
-            mix-blend: screen
-        }
-
-        .eyes {
-            display: flex;
-            gap: 14px
-        }
-
-        .eye {
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: white;
-            box-shadow: 0 6px 14px rgb(0 0 0 / .35)
-        }
-
-        .eye::after {
-            content: "";
-            display: block;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #0b0b10;
-            margin: 12px
-        }
-
-        .toy.spider {
-            background: radial-gradient(60% 60% at 30% 30%, #ff8080, #e11d48 45%, #140a10 80%)
-        }
-
-        .web {
-            position: absolute;
-            inset: auto 6% 6% 6%;
-            height: 38%;
-            border: 1px dashed rgba(255, 255, 255, .35);
-            border-radius: 12px
-        }
-    </style>
 </head>
-
 <body>
-    <header>
-        <div class="wrap nav">
-            <a class="logo" href="#home" aria-label="Ir al inicio">
-                <span class="dot" aria-hidden="true"></span>
-                <span>BubuLabs</span>
-            </a>
-            <nav class="menu" aria-label="Principal">
-                <a href="#coleccion">Colección</a>
-                <a href="#historia">Historia</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-            <button class="menu-toggle" aria-label="Abrir menú"
-                onclick="document.querySelector('.menu.mobile')?.classList.toggle('open')">☰</button>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#home" aria-label="Ir al inicio">
+  <img src="assets/logo-minilogo3d.png" alt="MiniLabs3D logo" />
+  <span>MiniLabs3D</span>
+</a>
+
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#coleccion">Colección</a>
+        <a href="#historia">Historia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.menu.mobile')?.classList.toggle('open')">☰</button>
+    </div>
+    <div class="wrap menu mobile" style="display:none"></div>  </header>
+
+  <main class="wrap">
+    <section class="hero" id="home">
+      <div>
+        <div class="tag">MiniLabs3D · Colección oficial</div>
+        <h1>Bubulabs: criaturas traviesas con chispa</h1>
+        <p>Pequeños seres nacidos en <strong>MiniLabs3D</strong>. Les encanta disfrazarse de héroes, monstruos y leyendas del cine. Cada uno tiene su historia… y su espiral brillante.</p>
+        <div style="display:flex; gap:10px; margin-top:14px">
+          <a class="cta" href="#coleccion">Ver colección</a>
+          <a class="pill" href="#contacto">Quiero colaborar</a>
         </div>
-        <div class="wrap menu mobile" style="display:none"></div>
-    </header>
+      </div>
+      <div class="card">
+        <div class="toy" role="img" aria-label="Muñeco base Bubulabs con espiral luminosa">
+          <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+          <div class="web" aria-hidden="true"></div>
+        </div>
+        <div style="padding:10px 2px; display:flex; justify-content:space-between; align-items:center">
+          <span class="badge">Diseño base</span>
+          <span class="badge">Espíritu travieso</span>
+        </div>
+      </div>
+    </section>
 
-    <main class="wrap">
-        <section class="hero" id="home">
-            <div>
-                <div class="tag">MiniLabs3D · Colección oficial</div>
-                <h1>Bubulabs: criaturas traviesas con chispa</h1>
-                <p>Pequeños seres nacidos en <strong>MiniLabs3D</strong>. Les encanta disfrazarse de héroes, monstruos y
-                    leyendas del cine. Cada uno tiene su historia… y su espiral brillante.</p>
-                <div style="display:flex; gap:10px; margin-top:14px">
-                    <a class="cta" href="#coleccion">Ver colección</a>
-                    <a class="pill" href="#contacto">Quiero colaborar</a>
-                </div>
+    <section id="coleccion">
+      <div class="section-title">
+        <h2 style="margin:0">Colección</h2>
+        <span class="pill">2 diseños</span>
+      </div>
+      <div class="grid gallery">
+        <article class="item">
+          <div class="toy" aria-label="Bubulab Base">
+            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+          </div>
+          <div class="info">
+            <h3>Bubulab Base</h3>
+            <p class="muted">Base oficial de la colección. Cuerpo redondeado tipo vinilo y espiral brillante en el pecho.</p>
+            <div class="buy">
+              <span class="price">Próximamente</span>
+              <a class="btn" href="#contacto">Avísame</a>
             </div>
-            <div class="card">
-                <div class="toy" role="img" aria-label="Muñeco base Bubulabs con espiral luminosa">
-                    <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-                    <div class="web" aria-hidden="true"></div>
-                </div>
-                <div style="padding:10px 2px; display:flex; justify-content:space-between; align-items:center">
-                    <span class="badge">Diseño base</span>
-                    <span class="badge">Espíritu travieso</span>
-                </div>
+          </div>
+        </article>
+        <article class="item">
+          <div class="toy spider" aria-label="Bubulab Araña Roja">
+            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+          </div>
+          <div class="info">
+            <h3>Bubulab Araña Roja</h3>
+            <p class="muted">Colores rojo y negro, ojos grandes blancos y patrón abstracto tipo telaraña. Actitud traviesa.</p>
+            <div class="buy">
+              <span class="price">Limited</span>
+              <a class="btn" href="#contacto">Reservar</a>
             </div>
-        </section>
+          </div>
+        </article>
+        <article class="item">
+          <div class="toy" style="background:radial-gradient(60% 60% at 30% 30%, #a7f3d0, #10b981 45%, #0f172a 80%)" aria-label="Sorpresa en camino">
+            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
+          </div>
+          <div class="info">
+            <h3>Próximo Bubulab…</h3>
+            <p class="muted">Nueva variante en desarrollo. ¿Qué disfraz te gustaría ver?</p>
+            <div class="buy">
+              <span class="price">Idea Lab</span>
+              <a class="btn" href="#contacto">Proponer</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <section id="coleccion">
-            <div class="section-title">
-                <h2 style="margin:0">Colección</h2>
-                <span class="pill">2 diseños</span>
-            </div>
-            <div class="grid gallery">
-                <article class="item">
-                    <div class="toy" aria-label="Bubulab Base">
-                        <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-                    </div>
-                    <div class="info">
-                        <h3>Bubulab Base</h3>
-                        <p class="muted">Base oficial de la colección. Cuerpo redondeado tipo vinilo y espiral brillante
-                            en el pecho.</p>
-                        <div class="buy">
-                            <span class="price">Próximamente</span>
-                            <a class="btn" href="#contacto">Avísame</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="toy spider" aria-label="Bubulab Araña Roja">
-                        <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-                    </div>
-                    <div class="info">
-                        <h3>Bubulab Araña Roja</h3>
-                        <p class="muted">Colores rojo y negro, ojos grandes blancos y patrón abstracto tipo telaraña.
-                            Actitud traviesa.</p>
-                        <div class="buy">
-                            <span class="price">Limited</span>
-                            <a class="btn" href="#contacto">Reservar</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="item">
-                    <div class="toy"
-                        style="background:radial-gradient(60% 60% at 30% 30%, #a7f3d0, #10b981 45%, #0f172a 80%)"
-                        aria-label="Sorpresa en camino">
-                        <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-                    </div>
-                    <div class="info">
-                        <h3>Próximo Bubulab…</h3>
-                        <p class="muted">Nueva variante en desarrollo. ¿Qué disfraz te gustaría ver?</p>
-                        <div class="buy">
-                            <span class="price">Idea Lab</span>
-                            <a class="btn" href="#contacto">Proponer</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <section id="historia" style="margin-top:34px">
+      <div class="section-title">
+        <h2 style="margin:0">Historia</h2>
+        <span class="pill">El laboratorio</span>
+      </div>
+      <div class="about">
+        <div class="card">
+          <h3 style="margin-top:0">¿Qué es BubuLabs?</h3>
+          <p>Los Bubulabs nacen en <strong>MiniLabs3D</strong>. Pequeños, curiosos y llenos de imaginación. Mantienen siempre su cara base y esa espiral brillante en el pecho, sin importar el disfraz.</p>
+          <p>La colección oficial incluye <em>Bubulab Base</em> y <em>Bubulab Araña Roja</em>, y seguirá creciendo con ediciones limitadas.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Para fans y coleccionistas</h3>
+          <p>Si eres coleccionista o marca y te interesa una colaboración, cuéntanos tu idea. Podemos explorar variantes, empaques y lanzamientos especiales.</p>
+          <ul>
+            <li>Impresión 3D y acabados premium</li>
+            <li>Packaging temático</li>
+            <li>Reservas limitadas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <section id="historia" style="margin-top:34px">
-            <div class="section-title">
-                <h2 style="margin:0">Historia</h2>
-                <span class="pill">El laboratorio</span>
-            </div>
-            <div class="about">
-                <div class="card">
-                    <h3 style="margin-top:0">¿Qué es BubuLabs?</h3>
-                    <p>Los Bubulabs nacen en <strong>MiniLabs3D</strong>. Pequeños, curiosos y llenos de imaginación.
-                        Mantienen siempre su cara base y esa espiral brillante en el pecho, sin importar el disfraz.</p>
-                    <p>La colección oficial incluye <em>Bubulab Base</em> y <em>Bubulab Araña Roja</em>, y seguirá
-                        creciendo con ediciones limitadas.</p>
-                </div>
-                <div class="card">
-                    <h3 style="margin-top:0">Para fans y coleccionistas</h3>
-                    <p>Si eres coleccionista o marca y te interesa una colaboración, cuéntanos tu idea. Podemos explorar
-                        variantes, empaques y lanzamientos especiales.</p>
-                    <ul>
-                        <li>Impresión 3D y acabados premium</li>
-                        <li>Packaging temático</li>
-                        <li>Reservas limitadas</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <section id="contacto" style="margin-top:34px">
+      <div class="section-title">
+        <h2 style="margin:0">Contacto</h2>
+        <span class="pill">Hablemos</span>
+      </div>
+      <div class="card">
+        <form onsubmit="event.preventDefault(); alert('¡Gracias! Te escribiremos pronto.'); this.reset();">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+            <label>Nombre<br><input required name="name" style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
+            <label>Email<br><input required type="email" name="email" style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
+          </div>
+          <label style="display:block; margin-top:12px">Mensaje<br>
+            <textarea required name="msg" rows="4" style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></textarea>
+          </label>
+          <div style="display:flex; gap:10px; margin-top:12px">
+            <button class="cta" type="submit">Enviar</button>
+            <a class="pill" href="mailto:hola@minilabs3d.com">o escríbenos</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        <section id="contacto" style="margin-top:34px">
-            <div class="section-title">
-                <h2 style="margin:0">Contacto</h2>
-                <span class="pill">Hablemos</span>
-            </div>
-            <div class="card">
-                <form onsubmit="event.preventDefault(); alert('¡Gracias! Te escribiremos pronto.'); this.reset();">
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
-                        <label>Nombre<br><input required name="name"
-                                style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
-                        <label>Email<br><input required type="email" name="email"
-                                style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></label>
-                    </div>
-                    <label style="display:block; margin-top:12px">Mensaje<br>
-                        <textarea required name="msg" rows="4"
-                            style="width:100%; padding:10px; background:#0f0f18; border:1px solid #23233a; border-radius:10px; color:var(--ink)"></textarea>
-                    </label>
-                    <div style="display:flex; gap:10px; margin-top:12px">
-                        <button class="cta" type="submit">Enviar</button>
-                        <a class="pill" href="mailto:hola@minilabs3d.com">o escríbenos</a>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
+  <footer class="wrap footer">
+    <span>© <span id="year"></span> MiniLabs3D · BubuLabs</span>
+    <span>Hecho con ❤ en España</span>
+  </footer>
 
-    <footer class="wrap footer">
-        <span>© <span id="year"></span> MiniLabs3D · BubuLabs</span>
-        <span>Hecho con ❤ en España</span>
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
