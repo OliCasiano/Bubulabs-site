@@ -357,3 +357,16 @@ header .wrap {
   border-top-right-radius: var(--radius);
   display:block;
 }
+
+/* Dialogo genérico */
+/* Colores y tipografías del diálogo */
+dialog, .dialog-card, .dialog-content{
+  color: var(--ink);
+  font-family: inherit;
+}
+.dialog-header strong{ color: var(--ink); }
+.collections-list{ margin:0; padding-left:18px; }
+.collections-list li{ color: var(--ink); opacity:.9; }
+
+/* (Opcional) separadores sutiles */
+.dialog-header{ border-bottom:1px solid #1f1f2a; }
