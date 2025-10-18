@@ -358,15 +358,36 @@ header .wrap {
   display:block;
 }
 
-/* Dialogo genérico */
-/* Colores y tipografías del diálogo */
-dialog, .dialog-card, .dialog-content{
-  color: var(--ink);
-  font-family: inherit;
-}
-.dialog-header strong{ color: var(--ink); }
-.collections-list{ margin:0; padding-left:18px; }
-.collections-list li{ color: var(--ink); opacity:.9; }
+/* ===== Diálogo Colecciones (estilos base) ===== */
+dialog{ border:none; padding:0; background:transparent; }
+dialog::backdrop{ background: rgba(0,0,0,.55); }
 
-/* (Opcional) separadores sutiles */
-.dialog-header{ border-bottom:1px solid #1f1f2a; }
+.dialog-card{
+  width:min(560px, 92vw);
+  background: linear-gradient(180deg,#141420,#10101a);
+  border:1px solid #1f1f2a;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  overflow:hidden;
+}
+
+.dialog-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 14px; border-bottom:1px solid #1f1f2a;
+}
+
+.dialog-close{
+  background:#181826; border:1px solid #232334; color:#cfcfe6;
+  padding:6px 10px; border-radius:10px; cursor:pointer;
+}
+.dialog-close:hover{ filter:brightness(1.1); }
+
+.dialog-content{ padding:16px; }
+
+.collections-list{ margin:0; padding-left:18px; line-height:1.8; }
+
+/* ===== Solo tipografía y color, SIN tocar fondos ni layout ===== */
+.dialog-card, .dialog-content, .dialog-header { font-family: inherit; color: var(--ink); }
+.dialog-header strong { color: var(--ink); }
+.collections-list li { color: var(--ink); }
+
